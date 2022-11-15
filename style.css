@@ -1,0 +1,138 @@
+body {
+    background-color: black;
+    margin: auto;
+    height: 100vh;
+}
+
+.content {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    height: 100vh;  
+}
+
+/* creating two circles without right border */ 
+.circle::after, .circle:before {
+    content: "" ;
+    border: solid 60px yellow;
+    border-radius: 50%;
+    border-right-color: transparent;
+    display: block;
+    animation: rotate-to-right 0.6s ease infinite;
+}
+.circle::after {
+    margin-top: -120px;
+    animation: rotate-to-left 0.6s ease infinite;
+}
+
+/* creating dot (invisible) to use its animated shadows */
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-left: -100px;
+    margin-top: -80px;
+    animation: move-dot-shadows 0.6s linear 0s infinite;
+} 
+
+
+/*animations*/
+@keyframes rotate-to-right {
+    50% { transform: rotate(46deg);}
+}
+
+@keyframes rotate-to-left {
+    50% { transform: rotate(-44deg);}
+}
+
+@keyframes move-dot-shadows {
+    0% {box-shadow: 
+        100px 39px 0 0 white,
+        200px 39px 0 0 white,
+        300px 39px 0 0 white,
+        400px 39px 0 0 white,
+        500px 39px 0 0 white,
+        600px 39px 0 0 white,
+        700px 39px 0 0 white,
+        800px 39px 0 0 white;}
+    100% {box-shadow:  
+        0px 39px  0 0 white,
+        100px 39px 0 0 white,
+        200px 39px 0 0 white,
+        300px 39px 0 0 white,
+        400px 39px 0 0 white,
+        500px 39px 0 0 white,
+        600px 39px 0 0 white,
+        700px 39px 0 0 white;}
+} 
+
+@-webkit-keyframes rotate-to-right {
+    50% { transform: rotate(46deg);}
+}
+@-moz-keyframes rotate-to-right {
+    50% { transform: rotate(46deg);}
+}
+
+@-webkit-keyframes rotate-to-left {
+    50% { transform: rotate(-44deg);}
+}
+@-moz-keyframes rotate-to-left {
+    50% { transform: rotate(-44deg);}
+}
+
+@-webkit-keyframes move-dot-shadows {
+    0% {box-shadow: 
+        100px 39px 0 0 white,
+        200px 39px 0 0 white,
+        300px 39px 0 0 white,
+        400px 39px 0 0 white,
+        500px 39px 0 0 white,
+        600px 39px 0 0 white,
+        700px 39px 0 0 white,
+        800px 39px 0 0 white;}
+    100% {box-shadow:  
+        0px 39px  0 0 white,
+        100px 39px 0 0 white,
+        200px 39px 0 0 white,
+        300px 39px 0 0 white,
+        400px 39px 0 0 white,
+        500px 39px 0 0 white,
+        600px 39px 0 0 white,
+        700px 39px 0 0 white;}
+} 
+@-moz-keyframes move-dot-shadows {
+    0% {box-shadow: 
+        100px 39px 0 0 white,
+        200px 39px 0 0 white,
+        300px 39px 0 0 white,
+        400px 39px 0 0 white,
+        500px 39px 0 0 white,
+        600px 39px 0 0 white,
+        700px 39px 0 0 white,
+        800px 39px 0 0 white;}
+    100% {box-shadow:  
+        0px 39px  0 0 white,
+        100px 39px 0 0 white,
+        200px 39px 0 0 white,
+        300px 39px 0 0 white,
+        400px 39px 0 0 white,
+        500px 39px 0 0 white,
+        600px 39px 0 0 white,
+        700px 39px 0 0 white;}
+} 
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
